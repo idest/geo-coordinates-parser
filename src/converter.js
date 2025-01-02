@@ -72,17 +72,6 @@ function converter(coordsString, decimalPlaces) {
       }
 
       originalFormat = "DD"
-
-      //validation, we don't want things like 23.00000
-
-      //some more validation: no zero coords or degrees only
-      if (Number(Math.round(ddLat)) == Number(ddLat)) {
-        throw new Error('integer only coordinate provided')
-      }
-
-      if (Number(Math.round(ddLng)) == Number(ddLng)) {
-        throw new Error('integer only coordinate provided')
-      }
       
       //get directions
       if(match[1]) {
