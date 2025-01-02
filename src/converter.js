@@ -353,11 +353,6 @@ function converter(coordsString, decimalPlaces) {
       }
     }
 
-    //no integer coords allowed
-    if(/^\d+$/.test(verbatimLat) || /^\d+$/.test(verbatimLng)) {
-      throw new Error('degree only coordinate/s provided')
-    }
-
     //all done!!
     //just truncate the decimals appropriately
     ddLat = Number(Number(ddLat).toFixed(decimalPlaces))
