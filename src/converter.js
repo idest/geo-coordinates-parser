@@ -191,11 +191,6 @@ function converter(coordsString, decimalPlaces) {
     match = coords_other.exec(coordsString);
     matchSuccess = checkMatch(match);
 
-    // we need an extra check here for things that matched that shouldn't have
-    if (match.filter(x => x).length <= 5) {
-      throw new Error("invalid coordinates format")	
-    }
-
     if (matchSuccess) {
       ddLat = Math.abs(parseInt(match[2]));
       if (match[4]){
