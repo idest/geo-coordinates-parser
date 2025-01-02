@@ -8,7 +8,7 @@ const dm_numbers = /^([+-]?[0-8]?[0-9])\s+([0-5]?[0-9]\.\d{3,})[\s,]{1,}([+-]?[0
 
 //decimal degrees
 //const dd_re = /^(NORTH|SOUTH|[NS])?[\s]*([+-]?[0-8]?[0-9](?:[\.,]\d{3,}))[\s]*([•º°]?)[\s]*(NORTH|SOUTH|[NS])?[\s]*[,/;]?[\s]*(EAST|WEST|[EW])?[\s]*([+-]?[0-1]?[0-9]?[0-9](?:[\.,]\d{3,}))[\s]*([•º°]?)[\s]*(EAST|WEST|[EW])?$/i;
-const dd_re = /^(NORTH|NORTE|SOUTH|SUR|[NS])?[\s]*([+-]?[0-8]?[0-9](?:[\.,]\d{3,}))[\s]*([•º°]?)[\s]*(NORTH|NORTE|SOUTH|SUR|[NS])?[\s]*[,/;]?[\s]*(EAST|ESTE|WEST|OESTE|[EWO])?[\s]*([+-]?[0-1]?[0-9]?[0-9](?:[\.,]\d{3,}))[\s]*([•º°]?)[\s]*(EAST|ESTE|WEST|OESTE|[EWO])?$/i;
+const dd_re = /^(NORTH|NORTE|SOUTH|SUR|[NS])?[\s]*([+-]?[0-8]?[0-9](?:[\.,]\d+)?)[\s]*([•º°]?)[\s]*(NORTH|NORTE|SOUTH|SUR|[NS])?[\s]*[,/;]?[\s]*(EAST|ESTE|WEST|OESTE|[EWO])?[\s]*([+-]?[0-1]?[0-9]?[0-9](?:[\.,]\d+)?)[\s]*([•º°]?)[\s]*(EAST|ESTE|WEST|OESTE|[EWO])?$/i;
 
 //degrees minutes seconds with '.' as separator - gives array with 15 values
 const dms_periods = /^(NORTH|NORTE|SOUTH|SUR|[NS])?\s*([+-]?[0-8]?[0-9])\s*(\.)\s*([0-5]?[0-9])\s*(\.)\s*((?:[0-5]?[0-9])(?:[\.,]\d{1,3})?)?\s*(NORTH|NORTE|SOUTH|SUR|[NS])?(?:\s*[,/;]\s*|\s*)(EAST|ESTE|WEST|OESTE|[EWO])?\s*([+-]?[0-1]?[0-9]?[0-9])\s*(\.)\s*([0-5]?[0-9])\s*(\.)\s*((?:[0-5]?[0-9])(?:[\.,]\d{1,3})?)?\s*(EAST|ESTE|WEST|OESTE|[EWO])?$/i;
