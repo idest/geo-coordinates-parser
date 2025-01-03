@@ -269,14 +269,14 @@ function converter(coordsString, decimalPlaces) {
     }
 
     //make sure the signs and cardinal directions match
-    let patt = /S|SOUTH/i;
+    let patt = /S|SOUTH|SUR/i;
     if (patt.test(latdir)) {
       if (ddLat > 0) {
         ddLat = -1 * ddLat;
       }
     }
         
-    patt = /W|WEST/i;
+    patt = /W|WEST|O|OESTE/i;
     if (patt.test(lngdir)){
       if (ddLng > 0) {
         ddLng = -1 * ddLng;
@@ -394,7 +394,7 @@ function checkMatch(match) { //test if the matched groups arrays are 'balanced'.
 
   // regex for testing corresponding values match
   const numerictest = /^[-+]?\d+([\.,]\d+)?$/; //for testing numeric values
-  const stringtest = /[eastsouthnorthwest]+/i; //for testing string values (north, south, etc)
+  const stringtest = /[eastsouthnorthwestestesurnorteoeste]+/i; //for testing string values (north, south, etc)
   
   
   const halflen = filteredMatch.length/2;
