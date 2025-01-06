@@ -9,7 +9,7 @@
  */
 function toCoordinateFormat(format) {
 
-  if(!['DMS', 'DM', 'DD'].includes(format)) throw new Error('invalid format specified')
+  if(!['DMS', 'DM', 'DD', 'dd'].includes(format)) throw new Error('invalid format specified')
 
   if(this.decimalCoordinates && this.decimalCoordinates.trim()) {
 
@@ -25,6 +25,10 @@ function toCoordinateFormat(format) {
 
     if(format == 'DD'){
       result = `${absoluteLatitude}° ${latDir}, ${absoluteLongitude}° ${longDir}`
+    }
+    
+    if(format == 'dd'){
+      result = `${decimalLatitude.toFixed(3), decimalLongitude.toFixed(3)}`
     }
 
     //else we need some more things
