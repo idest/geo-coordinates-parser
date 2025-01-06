@@ -28,7 +28,7 @@ function toCoordinateFormat(format) {
     }
     
     if(format == 'dd'){
-      result = `${decimalLatitude.toFixed(3)}, ${decimalLongitude.toFixed(3)}`
+      result = `${decimalLatitude.toFixed(5)}, ${decimalLongitude.toFixed(5)}`
     }
 
     //else we need some more things
